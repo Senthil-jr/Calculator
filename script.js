@@ -2,13 +2,19 @@
 const display = document.getElementById("display");
 
 
-function appendToDisplay(input){
-display.value += input;
-}
+function appendToDisplay(value) {
+    const display = document.getElementById("display");
+    if (value === "BS") {
+      display.value = display.value.slice(0, -1);
+    } else {
+      display.value += value;
+    }
+  }
 
-function clear(){
+function clr(){
    display.value = "";
 }
+
 
 function calculate(){
  try {
